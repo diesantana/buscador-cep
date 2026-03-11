@@ -1,0 +1,1 @@
+// Controla o fluxo da aplicação
