@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de CEP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <h1>Buscador de CEP</h1>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Busca do CEP -->
+        <section class="cep-search">
+            <h2>Consultar CEP</h2>
+            <form id="cep-form">
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" placeholder="Digite o CEP" maxlength="9" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+        <!-- Resultado -->
+        <section class="cep-result" id="resultado">
+            <h2>Resultado</h2>
+            <div class="cep-data" id="cep-data">
+                <p>Digite um CEP para buscar o endereço.</p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer id="contato">
+        <h2>Contato</h2>
+        <p>Desenvolvido por Diego Santana</p>
+        <a href="https://github.com/diesantana" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/die-santana/" target="_blank">LinkedIn</a>
+    </footer>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
