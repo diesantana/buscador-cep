@@ -1,33 +1,144 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-
-body{
-    font-size: 16px;
-    background: #252525;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+body {
+  font-size: 16px;
+  background: #000;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    background-color: #FF8400;
-    padding: 16px 24px;
+  background-color: #ff8400;
+  padding: 16px;
 }
 
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header nav h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  width: 100%;
+  padding-bottom: 54px;
+  max-width: 960px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.cep-search {
+  padding: 32px 16px;
+}
+
+.cep-search h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 16px;
+}
+
+.cep-search form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cep-search label {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.cep-search input {
+  height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+  max-width: 350px;
+}
+
+.cep-search button {
+  height: 48px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff8400;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Esconde o Label*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cep-result {
+  background-color: #333333;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 24px;
+}
+
+.cep-result h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff8400;
+  padding: 16px;
+}
+
+footer h2 {
+  font-size: 1.5rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  main {
+    padding: 78px;
+  }
+
+  .cep-search h2 {
+    font-size: 3rem;
+  }
+  .cep-result h2 {
+    font-size: 2.5rem;
+  }
 }
