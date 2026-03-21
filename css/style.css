@@ -104,6 +104,11 @@ main {
   flex-shrink: 0;
 }
 
+.cep-search button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Esconde o Label*/
 .sr-only {
   position: absolute;
