@@ -64,10 +64,10 @@ main {
   gap: 8px;
 }
 
-.input-group{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .cep-search label {
@@ -128,6 +128,7 @@ footer {
   flex-direction: column;
   background-color: #ff8400;
   padding: 16px;
+  gap: 8px;
 }
 
 footer h2 {
@@ -135,7 +136,6 @@ footer h2 {
 }
 
 footer .contato-links {
-  padding-top: 8px;
   display: flex;
   gap: 16px;
 }
@@ -148,6 +148,7 @@ footer .contato-links a:hover {
 @media screen and (min-width: 768px) {
   main {
     padding: 78px;
+    min-height: 550px;
   }
 
   .cep-search h2 {
