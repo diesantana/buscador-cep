@@ -25,13 +25,17 @@
         <!-- Busca do CEP -->
         <section class="cep-search">
             <h2>Consultar CEP</h2>
+
             <form id="cep-form">
                 <label for="cep" class="sr-only">CEP</label>
-                <div class="input-group">
-                    <input type="text" name="cep" id="cep" class="input-cep" placeholder="Digite o CEP" maxlength="9" required>
-                    <div id="error-message" class="input-cep-error"></div>
+
+                <div class="form-row">
+                    <input type="text" name="cep" id="cep" class="input-cep" placeholder="Digite o CEP" maxlength="9"
+                        required>
+                    <button type="submit">Buscar</button>
                 </div>
-                <button type="submit">Buscar</button>
+
+                <div id="error-message" class="input-cep-error"></div>
             </form>
         </section>
         <!-- Resultado -->
