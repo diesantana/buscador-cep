@@ -1,8 +1,8 @@
 // =================================================================
 // Controla o fluxo da aplicação
 // =================================================================
-import { clearZipCode, isValidZipCode } from "./utils/cep-utils.js";
-import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress, showLoading, hiddenLoading } from "./ui/cep-ui.js";
+import { clearZipCode, isValidZipCode, applyCEPMask } from "./utils/cep-utils.js";
+import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress, showLoading, hiddenLoading} from "./ui/cep-ui.js";
 import { fetchCep } from "./services/viacep.js";
 
 // Elementos
@@ -41,7 +41,8 @@ form.addEventListener("submit", async (event) => {
 });
 
 // Limpa a mensagem de erro e o endereço ao digitar
-form.addEventListener("input", (event) => {
+inputCEP.addEventListener("input", () => {
+    inputCEP.value = applyCEPMask(inputCEP.value);
     clearErrorMessage();
     clearAddress();
 });
