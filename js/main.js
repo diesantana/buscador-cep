@@ -2,7 +2,7 @@
 // Controla o fluxo da aplicação
 // =================================================================
 import { clearZipCode, isValidZipCode } from "./utils/cep-utils.js";
-import { renderErrorMessage } from "./ui/cep-ui.js";
+import { renderErrorMessage, clearErrorMessage } from "./ui/cep-ui.js";
 /*
 main.js
     submit do form
@@ -17,7 +17,7 @@ main.js
 const form = document.querySelector("#cep-form");
 const inputCEP = document.querySelector("#cep");
 
-
+// Manipula o submit do form
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const enteredValue = inputCEP.value; // Valor digitado
@@ -32,6 +32,9 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    
 });
 
+// Limpa a mensagem de erro ao digitar
+form.addEventListener("input", (event) => {
+    clearErrorMessage();
+});
