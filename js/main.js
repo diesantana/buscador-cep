@@ -2,17 +2,8 @@
 // Controla o fluxo da aplicação
 // =================================================================
 import { clearZipCode, isValidZipCode } from "./utils/cep-utils.js";
-import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress } from "./ui/cep-ui.js";
+import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress, showLoading, hiddenLoading } from "./ui/cep-ui.js";
 import { fetchCep } from "./services/viacep.js";
-/*
-main.js
-    submit do form
-    → pega input.value
-    → limpa
-    → valida
-    → busca na API
-    → atualiza UI
-*/
 
 // Elementos
 const form = document.querySelector("#cep-form");
@@ -35,6 +26,8 @@ form.addEventListener("submit", async (event) => {
 
     // Buscar o CEP na API
     try {
+        showLoading();
+
         // buscar os dados de viacep.js
         const data = await fetchCep(cleanZipCode);
         
@@ -42,8 +35,9 @@ form.addEventListener("submit", async (event) => {
         renderAddress(data);
     } catch (error) {
         renderErrorMessage("Ocorreu um erro ao buscar o CEP, Verifique se o CEP informado é valido.");
+    } finally {
+        hiddenLoading();
     }
-
 });
 
 // Limpa a mensagem de erro e o endereço ao digitar
