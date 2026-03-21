@@ -123,12 +123,6 @@ main {
   padding: 24px;
 }
 
-.cep-result h2 {
-  font-size: 2rem;
-  text-align: center;
-  padding-bottom: 16px;
-}
-
 footer {
   display: flex;
   flex-direction: column;
@@ -158,8 +152,5 @@ footer .contato-links a:hover {
 
   .cep-search h2 {
     font-size: 3rem;
-  }
-  .cep-result h2 {
-    font-size: 2.5rem;
   }
 }
