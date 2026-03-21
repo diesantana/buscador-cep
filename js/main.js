@@ -34,7 +34,7 @@ form.addEventListener("submit", async (event) => {
         // renderiza os dados na UI
         renderAddress(data);
     } catch (error) {
-        renderErrorMessage("Ocorreu um erro ao buscar o CEP, Verifique se o CEP informado é valido.");
+        renderErrorMessage("Ocorreu um erro ao buscar o CEP. Verifique se o CEP informado é valido.");
     } finally {
         hideLoading();
     }
