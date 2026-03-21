@@ -5,6 +5,7 @@
 // Elementos
 const errorElement = document.querySelector("#error-message");
 const resultCEP = document.querySelector("#cep-data");
+const searchButton = document.querySelector('#cep-form button');
 
 /**
  * Renderiza uma mensagem de erro na interface.
@@ -43,4 +44,21 @@ export function renderAddress(data) {
 export function clearAddress() {
   resultCEP.innerHTML = '';
   resultCEP.hidden = true;
+}
+
+/**
+ * Exibe "loading" no botão de busca na interface.
+ */
+export function showLoading() {
+  searchButton.disabled = true;
+  searchButton.innerHTML = 'Buscando...';
+}
+
+/**
+ * Esconde "loading" no botão de busca na interface 
+ * e exibe "Buscar".
+ */
+export function hiddenLoading() {
+  searchButton.disabled = false;
+  searchButton.innerHTML = 'Buscar';
 }
