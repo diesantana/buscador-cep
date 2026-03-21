@@ -27,10 +27,20 @@ export function clearErrorMessage() {
  */
 export function renderAddress(data) {
   resultCEP.innerHTML = `
-    <p>CEP: ${data.cep}</p>
-    <p>Rua: ${data.logradouro}</p>
-    <p>Bairro: ${data.bairro}</p>
-    <p>Cidade: ${data.localidade}</p>
-    <p>Estado: ${data.uf}</p>
+    <p><strong>CEP: </strong> ${data.cep}</p>
+    <p><strong>Rua: </strong>${data.logradouro}</p>
+    <p><strong>Bairro: </strong>${data.bairro}</p>
+    <p><strong>Cidade: </strong>${data.localidade}</p>
+    <p><strong>Estado: </strong>${data.uf}</p>
   `;
+
+  resultCEP.hidden = false;
+}
+
+/**
+ * Limpa os dados do endereço da interface.
+ */
+export function clearAddress() {
+  resultCEP.innerHTML = '';
+  resultCEP.hidden = true;
 }
