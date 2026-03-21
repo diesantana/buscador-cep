@@ -58,7 +58,7 @@ export function showLoading() {
  * Esconde "loading" no botão de busca na interface 
  * e exibe "Buscar".
  */
-export function hiddenLoading() {
+export function hideLoading() {
   searchButton.disabled = false;
   searchButton.innerHTML = 'Buscar';
 }

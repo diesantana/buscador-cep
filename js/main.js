@@ -2,7 +2,7 @@
 // Controla o fluxo da aplicação
 // =================================================================
 import { clearZipCode, isValidZipCode, applyCEPMask } from "./utils/cep-utils.js";
-import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress, showLoading, hiddenLoading} from "./ui/cep-ui.js";
+import { renderErrorMessage, clearErrorMessage, renderAddress, clearAddress, showLoading, hideLoading} from "./ui/cep-ui.js";
 import { fetchCep } from "./services/viacep.js";
 
 // Elementos
@@ -36,7 +36,7 @@ form.addEventListener("submit", async (event) => {
     } catch (error) {
         renderErrorMessage("Ocorreu um erro ao buscar o CEP, Verifique se o CEP informado é valido.");
     } finally {
-        hiddenLoading();
+        hideLoading();
     }
 });
 
